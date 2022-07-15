@@ -1,0 +1,189 @@
+------------pool number with fixed population 32 and prevalence 0.1 
+5x32 prev0.1
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.719 (tests/sample)
+- CSL1, sensitivity 0.333, specificity 1-0.069, efficiency 0.156 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.844 (tests/sample)
+
+8x32 prev0.1
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.656 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.276, efficiency 0.250 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.094 (tests/sample)
+
+11x32 prev0.1
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.625 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.000, efficiency 0.344 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.375 (tests/sample)
+
+14x32 prev0.1
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.625 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.000, efficiency 0.438 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.469 (tests/sample)
+
+17x32 prev0.1 (S)
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.719 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.000, efficiency 0.531 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.531 (tests/sample)
+
+20x32 prev0.1 (S)
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.719 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.000, efficiency 0.625 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.625 (tests/sample)
+
+------------pool number with fixed population 32 and prevalence 0.2 
+5x32 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.938 (tests/sample)
+- CSL1, sensitivity 0.500, specificity 1-0.308, efficiency 0.156 (tests/sample)
+- Certified, sensitivity 0.833, specificity 1-0.000, efficiency 1.156 (tests/sample)
+
+8x32 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.906 (tests/sample)
+- CSL1, sensitivity 0.667, specificity 1-0.231, efficiency 0.250 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.094 (tests/sample)
+
+11x32 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.719 (tests/sample)
+- CSL1, sensitivity 0.833, specificity 1-0.269, efficiency 0.344 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.125 (tests/sample)
+
+14x32 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.719 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.000, efficiency 0.438 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.469 (tests/sample)
+
+17x32 prev0.2 (S)
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.844 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.000, efficiency 0.531 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.531 (tests/sample)
+
+20x32 prev0.2 (S)
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.844 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.000, efficiency 0.625 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.625 (tests/sample)
+
+------------pool number with fixed population 32 and prevalence 0.3  
+5x32 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.156 (tests/sample)
+- CSL1, sensitivity 0.700, specificity 1-0.545, efficiency 0.156 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.188 (tests/sample)
+
+8x32 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.281 (tests/sample)
+- CSL1, sensitivity 0.500, specificity 1-0.227, efficiency 0.250 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.281 (tests/sample)
+
+11x32 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.062 (tests/sample)
+- CSL1, sensitivity 0.800, specificity 1-0.182, efficiency 0.344 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.281 (tests/sample)
+
+14x32 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.062 (tests/sample)
+- CSL1, sensitivity 0.900, specificity 1-0.591, efficiency 0.438 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.312 (tests/sample)
+
+17x32 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.156 (tests/sample)
+- CSL1, sensitivity 0.900, specificity 1-0.409, efficiency 0.531 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.312 (tests/sample)
+
+20x32 prev0.3 (S-M)
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.156 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.000, efficiency 0.625 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.625 (tests/sample)
+
+----------sample number with fixed prevalence 0.1 and fixed pool number 5
+5x12 prev0.1 (S-M)
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.667 (tests/sample)
+- CSL1, sensitivity 0.000, specificity 1-0.000, efficiency 0.417 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.583 (tests/sample)
+
+5x22 prev0.1
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.455 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.100, efficiency 0.227 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.500 (tests/sample)
+
+5x32 prev0.1
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.719 (tests/sample)
+- CSL1, sensitivity 0.333, specificity 1-0.069, efficiency 0.156 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.844 (tests/sample)
+
+5x42 prev0.1 (S-M)
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.905 (tests/sample)
+- CSL1, sensitivity 0.750, specificity 1-0.158, efficiency 0.119 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.833 (tests/sample)
+
+5x52 prev0.1
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.885 (tests/sample)
+- CSL1, sensitivity 0.600, specificity 1-0.319, efficiency 0.096 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.038 (tests/sample)
+
+5x62 prev0.1
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.871 (tests/sample)
+- CSL1, sensitivity 0.333, specificity 1-0.339, efficiency 0.081 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.081 (tests/sample)
+
+----------sample number with fixed prevalence 0.2 and fixed pool number 5
+5x12 prev0.2 (S - M)
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.667 (tests/sample)
+- CSL1, sensitivity 0.500, specificity 1-0.000, efficiency 0.417 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.583 (tests/sample)
+
+5x22 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.773 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.111, efficiency 0.227 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 0.818 (tests/sample)
+
+5x32 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 0.938 (tests/sample)
+- CSL1, sensitivity 0.500, specificity 1-0.308, efficiency 0.156 (tests/sample)
+- Certified, sensitivity 0.833, specificity 1-0.000, efficiency 1.156 (tests/sample)
+
+5x42 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.119 (tests/sample)
+- CSL1, sensitivity 0.625, specificity 1-0.529, efficiency 0.119 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.119 (tests/sample)
+
+5x52 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.096 (tests/sample)
+- CSL1, sensitivity 0.200, specificity 1-0.167, efficiency 0.096 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.077 (tests/sample)
+
+5x62 prev0.2
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.081 (tests/sample)
+- CSL1, sensitivity 0.417, specificity 1-0.440, efficiency 0.081 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.097 (tests/sample)
+
+----------sample number with fixed prevalence 0.3 and fixed pool number 5 (individual tests are preferred)
+5x12 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.417 (tests/sample)
+- CSL1, sensitivity 1.000, specificity 1-0.750, efficiency 0.417 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.417 (tests/sample)
+
+5x22 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.227 (tests/sample)
+- CSL1, sensitivity 0.571, specificity 1-0.533, efficiency 0.227 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.273 (tests/sample)
+
+5x32 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.156 (tests/sample)
+- CSL1, sensitivity 0.700, specificity 1-0.545, efficiency 0.156 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.188 (tests/sample)
+
+5x42 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.119 (tests/sample)
+- CSL1, sensitivity 0.692, specificity 1-0.483, efficiency 0.119 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.143 (tests/sample)
+
+5x52 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.096 (tests/sample)
+- CSL1, sensitivity 0.562, specificity 1-0.250, efficiency 0.096 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.077 (tests/sample)
+
+5x62 prev0.3
+- PSN2, sensitivity 1.000, specificity 1.000, efficiency 1.081 (tests/sample)
+- CSL1, sensitivity 0.526, specificity 1-0.256, efficiency 0.081 (tests/sample)
+- Certified, sensitivity 1.000, specificity 1-0.000, efficiency 1.097 (tests/sample)
+
+
+
+

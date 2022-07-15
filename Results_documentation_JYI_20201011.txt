@@ -1,0 +1,45 @@
+CS_16_40_main_success_rate_successive_newtol
+- the 16 by 40 Bernoulli matrix from the main.pdf writeu  
+  is used
+- the mismatch ratio successive minimization with L2 norm is used
+- the relative error is used as criteria, and the tolerance is set tot be 1e-3
+- the raw data is saved in CS_R16C40_1PerCol9_Solver_successive_202010101314.mat
+- the sensing matrix is in A16_40_from_main.mat
+
+CS_16_40_main_success_rate_L1_MIN_newtol.fig
+- the 16 by 40 Bernoulli matrix from the main.pdf writeu  
+  is used
+- the generic L1 minimization is used
+- the relative error is used as criteria, and the tolerance is set tot be 1e-3
+- raw data is saved in CS_R16C40_1PerCol9_Solver_L1_MIN_202010101032.mat
+- the sensing matrix is in A16_40_from_main.mat
+
+CS_16_40_success_rate_newtol.fig
+- the 16 by 40 matrix is in bestAlphaK_matrixA_16x40.mat
+- the generic L1 minimization is used
+- the relative error is used as criteria, and the tolerance is set to be 1e-3
+- the raw data is in CS_R16C40_1PerCol1_Solver_L1_MIN_202010100944.mat
+
+25_100_5_success_rate_newtol.fig
+- the 25 by 100 matrix in bp_A_25_100_1InCol_5.mat
+- the generic L1 minimization is used
+- the absolute error is used as criteria, and the tolerance is set to be 1e-3
+- the raw data is in CS_R25C100_1PerCol5_Solver_L1_MIN_202010100842.mat
+
+CS_25_100_5_success_rate.fig
+- the 25 by 100 matrix in bp_A_25_100_1InCol_5.mat
+- the generic L1 minimization is used
+- the absolute error is used as criteria, and the tolerance is set to be 1e-5
+- the raw data is in CS_R25C100_1PerCol5_Solver_L1_MIN_202010081630.mat
+
+CS_16_40_5_success_rate.fig
+- the 16 by 40 matrix in bestAlphaK_matrixA_16x40.mat
+- the generic L1 minimization is used
+- the absolute error is used as criteria, and the tolerance is set to be 1e-5
+- the raw data is in CS_R16C40_1PerCol1_Solver_L1_MIN_202010081707.mat
+
+
+
+
+
+
