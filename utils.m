@@ -54,7 +54,7 @@ classdef utils
             case 'MHV-1'
                 
                 if obj.Params.trialInd==1
-                    fID = sprintf('Data/MHV-1_Trial-1_StdCurve_KWALDSTEIN_202010042110.xlsx');
+                    fID = sprintf('clinical_data/MHV-1_Trial-1_StdCurve_KWALDSTEIN_202010042110.xlsx');
                     stID = 'Sheet1';
                     ctRg1 = 'C2:C9';
                     vlRg1 = 'A2:A9';
@@ -64,7 +64,7 @@ classdef utils
                     
                 elseif obj.Params.trialInd==2
                     
-                    fID = sprintf('Data/MHV-1_Trial-2_StdCurve_KWALDSTEIN_202011201614.xlsx');
+                    fID = sprintf('clinical_data/MHV-1_Trial-2_StdCurve_KWALDSTEIN_202011201614.xlsx');
                     stID = 'Sheet1';
                     ctRg1 = 'C2:C9';
                     vlRg1 = 'A2:A9';
@@ -89,7 +89,7 @@ classdef utils
                 
                 if obj.Params.trialInd==1
                     
-                    fID = sprintf('Data/COVID-19_Trial-1_StdCurve_KWALDSTEIN_202010281100.xlsx');
+                    fID = sprintf('clinical_data/COVID-19_Trial-1_StdCurve_KWALDSTEIN_202010281100.xlsx');
                     stID = 'Sheet1';
 
                     ctRg1 = 'B3:B14';

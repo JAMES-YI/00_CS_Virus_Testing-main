@@ -23,9 +23,6 @@ Params.suppEstMethod = 'oboMM'; % via group testing if 'grpTest', or one-by-one 
 % Parameters associated with I/O and data
 Params.tmStamp = datestr(now,'yyyymmddHHMM');
 Params.dfNameExhaustiveData = sprintf('ExhaustiveData%s.mat',Params.tmStamp);
-Params.ctValType = 'primary'; % 'primary' (use only the first group of data) or 
-% 'secondary' (use only the duplicate data) or 'all' (use both the first
-% and duplicate data); default 'primary'
 Params.MatSize = preconfig.MatSize; 
 Params.userID = 'JYI';
 Params.vloadMin = 1e-6; % minimal virus load achievable by positive samples; recommended to be 1e-6;
@@ -37,7 +34,6 @@ Params.vloadMax = 1e-6; % minimal virus load achievable by positive samples; rec
 
 % Parameters associated with optimizer
 Params.solver = preconfig.solver; % 'EXHAUSTIVE', 'L1_MIN'
-Params.exhaustMode = 'NORMALIZED'; % for 'EXHAUSTIVE' solver only; 'REGULAR', 'NORMALIZED', 'SUCCESSIVE', or 'MINPOS'; default 'NORMALIZED' 
 Params.earlyTolCtVal = 1.5; % for 'EXHAUSTIVE' solver only; should not be too big or too small; recommended to be (0.5,2]; default 1.5
 
 % Parameters associated with virus
@@ -52,6 +48,7 @@ Params.stageNum = preconfig.stageNum; % fit to adaptive request decoding scheme;
 % use the results from the first n stages for decoding; 
 % maximal value for MHV-1 is 3 in trail 1; maximal value for MHV-1 is 2 in
 % trial 2; maximal value for COVID-19 is 2 in trial 1;
+Params.ctValType = preconfig.ctValType;
 
 switch Params.virusID
     case 'MHV-1'
@@ -81,8 +78,8 @@ Params.radius = 1; % only used in decoding methods based on grid search;
 % Parameters associated with writing results report
 % ToDo: COVID-19 case
 
-Params.optExcelID = sprintf('Data/%s_Trial-%d_Stage-%d_Decoded_%s.xlsx',...
-                            Params.virusID,Params.trialInd,Params.stageNum,Params.userID); 
+Params.optExcelID = sprintf('outputs/%s_Trial-%d_Stage-%d_duplicate-%s_Decoded_%s.xlsx',...
+                            Params.virusID,Params.trialInd,Params.stageNum,Params.ctValType,Params.userID); 
 Params.poolNum = Params.MatSize(1); 
 Params.sampNum = Params.MatSize(2); 
 Params.MatInfo = sprintf('%d by %d',Params.poolNum,Params.sampNum);

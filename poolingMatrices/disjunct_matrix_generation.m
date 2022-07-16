@@ -46,9 +46,6 @@ for iRow=1:rowNum
     end
 end
 
-% More efficient search
-
-
 
 
 end

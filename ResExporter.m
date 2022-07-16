@@ -8,9 +8,6 @@ classdef ResExporter
     % - removed dependencies for writing decoding results for other solvers: 
     % 'LSQ_ANA','LSQ_ITER','LOGRATIO_GRID','LOGRATIO_PGD','MISMATCHRATIO_GRID','MISMATCHRATIO_SUCC', 
     % 
-    % ToDo
-    % - reduce redundancy of codes
-    % - export data for COVID-19
 
     properties
 
@@ -36,6 +33,8 @@ classdef ResExporter
                 fprintf("%s not supported",Params.virusID)
             end
 
+            fprintf('Results have been saved at %s\n',Params.optExcelID);
+
         end
 
         function [obj,fmt] = formatter(obj)
@@ -43,7 +42,7 @@ classdef ResExporter
             switch obj.Params.virusID
 
                 case 'MHV-1'
-                    fmt.template = sprintf('Data/MHV-1_Trial-%d_Decoded_JYI_Template.xlsx',obj.Params.trialInd);
+                    fmt.template = sprintf('outputs/report_templates/MHV-1_Trial-%d_Decoded_JYI_Template.xlsx',obj.Params.trialInd);
                     if strcmp(obj.Params.MatInfo,'3 by 7')
                         fmt.indInitial = 3; fmt.indDelta = 9;
                         fmt.oo_mmStatusLet = 'F';
@@ -70,7 +69,7 @@ classdef ResExporter
                     end
 
                 case 'COVID-19'
-                    fmt.template = sprintf('Data/COVID-19_Trial-%d_Decoded_JYI_Template.xlsx',obj.Params.trialInd);
+                    fmt.template = sprintf('outputs/report_templates/COVID-19_Trial-%d_Decoded_JYI_Template.xlsx',obj.Params.trialInd);
                     if strcmp(obj.Params.MatInfo,'16 by 40')
                         fmt.indInitial = 3; fmt.indDelta = 42;
                         fmt.oo_mmStatusLet = 'J';

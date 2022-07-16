@@ -1,4 +1,4 @@
-function dataPath = AdReqDataPathSetup3rd(dataPath,Params)
+function dataPath = stg3_dataPath(dataPath,Params)
 % This file is to set up the data path for loading pooling test results
 % from the second stage.
 % 

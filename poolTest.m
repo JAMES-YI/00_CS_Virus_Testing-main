@@ -74,20 +74,6 @@ methods
         % Created by JYI, 08/01/2020
         % Updated by JYI, 10/23/2020
         % Updated by JYI, 11/22/2020
-        % - different dilution factor for COVID-19 and HMV1
-        %   for MHV1, the dilution factor is always 4 for every pool; for COVID-19, the
-        %   dilution factor is the same as the number of participants in
-        %   each pool, and different pools can have different dilution
-        %   factors
-        % - adaptive dilution for mixing matrix scaling, i.e., dilution
-        %   factor for each pool is determined by the number of individual
-        %   samples participating in it
-        % - for MHV1 virus (including MHV1_2 and MHV1), the dilution
-            %   for pools with multiple samples is 4 while the dilution for
-            %   pools containing only one sample is 1
-        % - whenever you change the computational setup for the optimizers,
-        %   the following needs to be revised correspondingly one by one:
-        %   'LSQ_ANA', 'LOGRATIO_GRID', 'MISMATCHRATIO_GRID', 'OBO_MM'
         % Updated by JYI, 06/24/2022
         % - removed the grid search solver, the projected gradient solver,
         % the least square solver, mismatchratio successive minimization solver,
@@ -115,19 +101,19 @@ methods
             
             fprintf('Performing exhaustive decoding...\n');
             
-%                     data.sampPos = obj.sampPos{i};
             data.sampNum = obj.sampNum; 
             data.poolCtVal = obj.poolCtVal{i};
-%                     data.sampMPos = obj.sampMPos{i};
             
             data.suppSet = setdiff(1:obj.sampNum,obj.sampMNeg{1,i});
+            data.sampPos = obj.sampPos{1,i};
+            data.sampMPos = obj.sampMPos{1,i};
             data.poolStatus = obj.poolStatus{i};
             data.poolVload = obj.poolVload{i};
-            [vload,otptData] = exhaustive(data,Params);
+            exs = exhaustive(data,Params);
+            vload = exs.vload;
             
             % prepare data for saving
-            
-            saveDataExhaust{i} = otptData;
+           
             
             % - construct final index sets results
             obj.sampCsVload{i} = vload;
@@ -137,16 +123,11 @@ methods
             obj.sampCsStatus{i}(obj.sampCsMPos{i}) = 'P';
 
         end
-        
-        % save exhasutive search data
-        if strcmp(solver,'EXHAUSTIVE')
-            save(Params.dfNameExhaustiveData,'saveDataExhaust');
-        end
   
     end
     
     
-    function obj = data_stg_concat(obj,SSDataLoader)
+    function obj = data_stg_concat(obj,dataLoader)
         % Concatenate pooling data from different testing stages
         % - SSDataLoader, an object of SecStgDataLoader class
         
@@ -154,25 +135,25 @@ methods
         MixMatBase = obj.MixMat;
         trialNumLoc = obj.runNum;
         obj.MixMat = cell(trialNumLoc,1);
-        runIndMat = cell2mat(SSDataLoader.runInd);
+        runIndMat = cell2mat(dataLoader.runInd);
         
         
         for iTrial=1:trialNumLoc
             
             if ~iscell(MixMatBase)
                 if ismember(iTrial,runIndMat)
-                    obj.MixMat{iTrial} = [MixMatBase; SSDataLoader.MixMat{iTrial}];
-                    obj.poolStatus{iTrial} = [obj.poolStatus{iTrial}; SSDataLoader.poolStatus{iTrial}];
-                    obj.poolCtVal{iTrial} = [obj.poolCtVal{iTrial}; SSDataLoader.poolCtVal{iTrial}];
+                    obj.MixMat{iTrial} = [MixMatBase; dataLoader.MixMat{iTrial}];
+                    obj.poolStatus{iTrial} = [obj.poolStatus{iTrial}; dataLoader.poolStatus{iTrial}];
+                    obj.poolCtVal{iTrial} = [obj.poolCtVal{iTrial}; dataLoader.poolCtVal{iTrial}];
                 else
                     % no updates if no extra pooling tests are performed
                     obj.MixMat{iTrial} = MixMatBase;
                 end
             else
                 if ismember(iTrial,runIndMat)
-                    obj.MixMat{iTrial} = [MixMatBase{iTrial}; SSDataLoader.MixMat{iTrial}];
-                    obj.poolStatus{iTrial} = [obj.poolStatus{iTrial}; SSDataLoader.poolStatus{iTrial}];
-                    obj.poolCtVal{iTrial} = [obj.poolCtVal{iTrial}; SSDataLoader.poolCtVal{iTrial}];
+                    obj.MixMat{iTrial} = [MixMatBase{iTrial}; dataLoader.MixMat{iTrial}];
+                    obj.poolStatus{iTrial} = [obj.poolStatus{iTrial}; dataLoader.poolStatus{iTrial}];
+                    obj.poolCtVal{iTrial} = [obj.poolCtVal{iTrial}; dataLoader.poolCtVal{iTrial}];
                 else
                     % no updates if no extra pooling tests are performed
                     obj.MixMat{iTrial} = MixMatBase{iTrial};

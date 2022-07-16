@@ -18,20 +18,20 @@
 % MHV-1; totally 1 independent trial experiment is done for COVID-19
 % - use the results from the first n stages for decoding; 
 % - 
-% ToDo
-% - loading primary data 
-% - loading secondary data
 % 
 clc; clear; close all; 
 system('taskkill /F /IM EXCEL.EXE');
 t_start = tic;
 %% Parameters for manually setup
-config.virusID = 'COVID-19'; % 'MHV-1', or 'COVID-19'
-config.trialInd = 1; % index of the independent experiments to consider; 
-config.stageNum = 2; % fit to adaptive request decoding scheme; 
+cfg.virusID = 'COVID-19'; % 'MHV-1', or 'COVID-19'
+cfg.trialInd = 1; % index of the independent experiments to consider; 
+cfg.stageNum = 2; % fit to adaptive request decoding scheme; 
+cfg.ctValType = 'primary'; % 'primary' (use only the first group of data) or 
+% 'secondary' (use only the duplicate data) or 'all' (use both the first
+% and duplicate data); default 'primary'
 
 %% Parameters automatically setup
-switch config.virusID
+switch cfg.virusID
     case 'MHV-1'
         
         MatSizeList = [3,7;...
@@ -46,13 +46,13 @@ switch config.virusID
         % EURASIP journal on advances in signal processing 2018, no. 1 (2018): 1-18.
 end
 
-config.solver = 'EXHAUSTIVE';
+cfg.solver = 'EXHAUSTIVE';
 
 
 %% Decoding and generate full report
 for iSize=1:size(MatSizeList,1) % decoding for eacg matrix size
-    config.MatSize = MatSizeList(iSize,:); 
-    poolset = main_dec(config);
+    cfg.MatSize = MatSizeList(iSize,:); 
+    poolset = main_dec(cfg);
 end
 
 fprintf("Completed decoding with %s seconds.\n",toc(t_start))

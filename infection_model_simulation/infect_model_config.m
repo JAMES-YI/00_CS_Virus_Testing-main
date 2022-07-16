@@ -202,6 +202,10 @@ InfMod = get(handles.InfMod,'String');
 InfModVal = InfMod{get(handles.InfMod,'Value')};
 
 %%
+if ~exist('./Synthetic_data', 'dir')
+   mkdir('Synthetic_data')
+end
+
 switch InfModVal
     
     case 'By Prevalence'
@@ -215,7 +219,7 @@ switch InfModVal
         Samp_VStatus = binornd(1,Prob,N,1);
         InfSet = find(Samp_VStatus==1);
         [k,~] = size(InfSet);
-        Samp_DataName = sprintf('Test_samples_N%d_prvc%d_%s.mat',...
+        Samp_DataName = sprintf('Synthetic_data/Test_samples_N%d_prvc%d_%s.mat',...
             N,round(Prob*100),datestr(now,'yyyymmddHHMM'));
         
     case 'By Case Number'
@@ -230,7 +234,7 @@ switch InfModVal
         InfSet = randsample(N,k);
         Samp_VStatus = zeros(N,1);
         Samp_VStatus(InfSet) = 1;
-        Samp_DataName = sprintf('Test_samples_N%d_k%d_%s.mat',...
+        Samp_DataName = sprintf('Synthetic_data/Test_samples_N%d_k%d_%s.mat',...
             N,k,datestr(now,'yyyymmddHHMM'));
         
 end
@@ -249,27 +253,6 @@ Params.Samp_VStatus = Samp_VStatus;
 Params.Samp_DataName = Samp_DataName;
 
 main(Params);
-
-
-% Infection model and sparsity
-
-% switch InfModVal
-%     
-%     case 'By Prevelance'
-%         
-%         if Spa>1 || Spa<0
-%             Msg = 'Error occurred! When choosing <by percentage>, select a value between 0 and 1.';
-%             error(Msg);
-%         end
-%         
-%     case 'By Percentage'
-%         
-%         if Spa<1 || mod(Spa,1)~=0 || Spa>N
-%             Msg = 'Error occurred! When choosing <by case number>, select a positive integer value no greater than N.';
-%             error(Msg);
-%         end
-%         
-% end
 
 
 %% Generate testing samples

@@ -27,9 +27,9 @@ switch Params.virusID
     case 'MHV-1'
         
         if Params.trialInd==1
-            dataPath.fID = 'Data/MHV-1_Trial-1_Stage-1_Encoded_KWALDSTEIN_202010042110.xlsx';
+            dataPath.fID = 'clinical_data/MHV-1_Trial-1_Stage-1_Encoded_KWALDSTEIN_202010042110.xlsx';
         elseif Params.trialInd==2
-            dataPath.fID = 'Data/MHV-1_Trial-2_Stage-1_Encoded_KWALDSTEIN_202011201614.xlsx';
+            dataPath.fID = 'clinical_data/MHV-1_Trial-2_Stage-1_Encoded_KWALDSTEIN_202011201614.xlsx';
         else
             error('Params.trialInd can be at most 2 for MHV-1.');
         end
@@ -38,7 +38,7 @@ switch Params.virusID
          
         % Params.dilution = 10; % fold of dilution; the dilution for each pool can be different
         if Params.trialInd==1
-            dataPath.fID = 'Data/COVID-19_Trial-1_Stage-1_Encoded_KWALDSTEIN_202010281100.xlsx';
+            dataPath.fID = 'clinical_data/COVID-19_Trial-1_Stage-1_Encoded_KWALDSTEIN_202010281100.xlsx';
         else
             error('Params.trialInd can be at most 1 for COVID-19.');
         end
