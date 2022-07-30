@@ -26,7 +26,7 @@ t_start = tic;
 cfg.virusID = 'COVID-19'; % 'MHV-1', or 'COVID-19'
 cfg.trialInd = 1; % index of the independent experiments to consider; 
 cfg.stageNum = 2; % fit to adaptive request decoding scheme; 
-cfg.ctValType = 'primary'; % 'primary' (use only the first group of data) or 
+cfg.ctValType = 'secondary'; % 'primary' (use only the first group of data) or 
 % 'secondary' (use only the duplicate data) or 'all' (use both the first
 % and duplicate data); default 'primary'
 

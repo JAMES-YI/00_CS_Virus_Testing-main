@@ -74,7 +74,7 @@ classdef ResExporter
                         fmt.indInitial = 3; fmt.indDelta = 42;
                         fmt.oo_mmStatusLet = 'J';
                         fmt.oo_mmVlLbLet = 'K';
-                        fmt.oo_mmVlUpLet = 'K';
+                        fmt.oo_mmVlUpLet = 'L';
                         fmt.CsStatusLet ='M';
                         fmt.CsVlLet = 'N';
                     else
